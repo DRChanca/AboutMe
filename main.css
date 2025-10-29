@@ -1,0 +1,331 @@
+/* Estilos básicos para centrar y ordenar el contenido */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+img.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Asegura que la imagen se vea bien */
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.links a:hover {
+    background-color: #2980b9;
+}
+/* --- Estilos de Navegación --- */
+
+nav {
+    width: 100%;
+    background-color: #333; /* Un fondo oscuro para la barra */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 30px; /* Espacio entre la barra y el contenido */
+}
+
+nav ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Pone los elementos en horizontal */
+    justify-content: center; /* Centra los enlaces */
+}
+
+nav li {
+    /* Separación entre los elementos de la lista */
+    margin: 0; 
+}
+
+nav a {
+    display: block; /* Hace que el enlace ocupe todo el espacio del 'li' */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Quita el subrayado */
+    padding: 15px 20px; /* Espaciado interno (alto y ancho) */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Efecto suave al pasar el ratón */
+}
+
+/* Efecto al pasar el ratón por encima */
+nav a:hover {
+    background-color: #555; /* Cambia el color de fondo */
+}
+/* --- Estilos de Habilidades --- */
+
+.skills-grid {
+    display: grid;
+    /* Crea 5 columnas en escritorio, y menos en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px; /* Espacio entre los logos */
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column; /* Pone el texto debajo del logo */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.skill-item img {
+    width: 50px; /* Tamaño del logo */
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+/* --- Estilos de Proyectos --- */
+
+.project-section {
+    /* Reinicia el centrado de texto que venía de .container */
+    text-align: left; 
+}
+
+.project-card {
+    background-color: #ffffff; /* Fondo blanco para la tarjeta */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 20px;
+    margin-bottom: 25px; /* Espacio entre proyectos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra muy ligera */
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.project-card h2 {
+    margin-top: 0;
+    color: #3498db; /* Color azul para el título del proyecto */
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+/* Reutilizamos el estilo del '.links a' que ya tenías, 
+  pero lo adaptamos un poco. 
+*/
+.link-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #333; /* Color oscuro para el botón */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+    background-color: #555; /* Un poco más claro al pasar el ratón */
+}
+/* --- Estilos de 'Sobre Mí' y Carrusel --- */
+
+/* El .container original centra todo. Lo ajustamos para que 
+  los párrafos y subtítulos de esta página se alineen a la izquierda,
+  ya que es más cómodo para leer historias.
+*/
+.container h2,
+.container p {
+    text-align: left;
+}
+
+/* El h1 principal sí lo dejamos centrado */
+.container h1 {
+    text-align: center;
+}
+
+/* El "carrusel" es un contenedor (ventana) 
+  que oculta el contenido que se desborda.
+*/
+.carousel-container {
+    /* 1. Define un ancho máximo. 
+      Prueba con 600px, 500px, o lo que prefieras.
+    */
+    max-width: 600px; 
+
+    /* 2. Añade márgenes automáticos a los lados
+      para centrar el carrusel si es más estrecho.
+    */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* (El resto de propiedades se quedan igual) */
+    width: 100%; /* Mantenemos el 100% para que sea responsive */
+    margin-top: 20px;
+    overflow: hidden; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* El "slide" es la tira de imágenes, 
+  que es mucho más ancha que el contenedor.
+*/
+.carousel-slide {
+    display: flex; /* Pone las imágenes en fila */
+    
+    /* Calculo: 6 imágenes (3 originales + 3 duplicadas).
+      Cada una ocupa 100% / 6 = 16.666% del ancho del slide.
+      El ancho total del slide es 600% (6 * 100%) del contenedor.
+    */
+    width: 500%; 
+    height: 40%;
+    
+    /* Llama a la animación 'scroll', que dura 30s, 
+      se mueve linealmente y se repite infinito.
+    */
+    animation: scroll 30s linear infinite;
+}
+
+.carousel-slide img {
+    /* Cada imagen ocupa 1/6 del ancho del slide 
+      (o 100% del ancho del contenedor).
+    */
+    width: 16.666%; 
+    height: auto; /* Mantiene la proporción */
+    flex-shrink: 0; /* Evita que las imágenes se encojan */
+}
+
+/* Definición de la animación 'scroll'
+  Mueve la tira de imágenes de 0% (inicio) a -50% (mitad).
+  Como duplicamos las imágenes, -50% muestra el inicio
+  exacto de las imágenes duplicadas, creando un bucle perfecto.
+*/
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Empieza en la imagen 1 */
+    }
+    100% {
+        transform: translateX(-50%); /* Termina en la imagen 1 (duplicada) */
+    }
+}
+
+/* Opcional: Pausa la animación si el usuario 
+  pone el ratón encima del carrusel.
+*/
+.carousel-container:hover .carousel-slide {
+    animation-play-state: paused;
+}
+
+.contact-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Estilo para el enlace de email, para que 
+   no sea un simple enlace azul subrayado.
+*/
+.contact-email {
+    display: inline-block; /* Para que respete el padding */
+    margin-top: 10px;
+    padding: 12px 20px;
+}
+
+.contact-form {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centrar el formulario */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espacio entre campos */
+}
+
+.form-group label {
+    display: block; /* Pone el label en su propia línea */
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left; /* Alinea el texto del label a la izquierda */
+}
+
+/* Estilo unificado para inputs de texto y textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Ocupan todo el ancho */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho */
+    font-family: Arial, sans-serif; /* Hereda la fuente */
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite al usuario reajustar solo verticalmente */
+    min-height: 120px;
+}
+
+/* Botón de envío */
+.submit-btn {
+    display: inline-block;
+    width: 100%; /* Botón ancho */
+    padding: 12px 20px;
+    background-color: #3498db; /* Color principal (puedes cambiarlo) */
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9; /* Color más oscuro al pasar el ratón */
+}
+/* --- Estilos de Información de Contacto --- */
+
+.contact-info {
+    margin-top: 30px; /* Espacio después de la línea <hr> */
+    font-size: 1.15em; /* Texto un poco más grande para que se lea bien */
+    line-height: 1.7;
+}
+
+/* Anulamos el 'text-align: left' que pusimos para los párrafos
+  en 'sobre-mi.html', para que esto sí quede centrado.
+*/
+.contact-info p {
+    text-align: center; 
+}
+
+.contact-info a {
+    color: #3498db; /* Mantenemos el color azul de los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}

@@ -207,7 +207,7 @@ nav a:hover {
     /* Llama a la animación 'scroll', que dura 30s, 
       se mueve linealmente y se repite infinito.
     */
-    animation: scroll 30s linear infinite;
+    animation: scroll 10s linear infinite;
 }
 
 .carousel-slide img {

@@ -2,8 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    color: #f4f4f4;
+    background-color: #333;
     margin: 0;
     padding: 20px;
 }
@@ -12,7 +12,7 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #333;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
@@ -112,7 +112,7 @@ nav a:hover {
 }
 
 .project-card {
-    background-color: #ffffff; /* Fondo blanco para la tarjeta */
+    background-color: black; /* Fondo blanco para la tarjeta */
     border: 1px solid #ddd; /* Borde sutil */
     border-radius: 8px; /* Esquinas redondeadas */
     padding: 20px;
@@ -166,6 +166,7 @@ nav a:hover {
 /* El h1 principal sí lo dejamos centrado */
 .container h1 {
     text-align: center;
+    color:white
 }
 
 /* --- Estilos del Nuevo Carrusel con Botones --- */
@@ -211,10 +212,7 @@ nav a:hover {
     display: block; /* Evita espacios extra debajo de la imagen */
 }
 
-/* 4. Estilo de los botones (compartido)
-   'position: absolute' los saca del flujo normal
-   para ponerlos "encima" de la imagen.
-*/
+
 .carousel-btn {
     position: absolute;
     top: 50%; /* Los centra verticalmente */
